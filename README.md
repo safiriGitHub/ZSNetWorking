@@ -1,10 +1,11 @@
 # ZSNetWorking
 AFNetworking(TODO:YYCache)简单的二次封装，封装常见的GET、POST、文件上传/下载、网络状态监测。
----
+
 
 #Introduction 介绍
 ---
-###1.主要类介绍：
+
+### 1.主要类介绍：
 
 - ZSNetWorking: 
 
@@ -45,19 +46,17 @@ AFNetworking(TODO:YYCache)简单的二次封装，封装常见的GET、POST、�
 	- (NSString *)apiBaseUrl {
     	return ...;
 	}
+	- (void)parseResult:(id)jsonResult requestModel:(ZSRequestModel *)requestModel parseCompletionHandler:(ZSNetWorkingResponseCompletion)completionHandler {
+	    NSMutableArray *resultArray = [NSMutableArray array];
+	    NSString *responseCode = @"0";
+	    NSString *responseMessage = @"";
+	    
+	    解析业务数据...
 
+	    completionHandler(resultArray, responseCode, responseMessage);
+	}
 
-- (void)parseResult:(id)jsonResult requestModel:(ZSRequestModel *)requestModel parseCompletionHandler:(ZSNetWorkingResponseCompletion)completionHandler {
-    NSMutableArray *resultArray = [NSMutableArray array];
-    NSString *responseCode = @"0";
-    NSString *responseMessage = @"";
-    
-    解析业务数据...
-
-    completionHandler(resultArray, responseCode, responseMessage);
-}
-
-@end
+	@end
 	
 	```
 
@@ -72,6 +71,6 @@ AFNetworking(TODO:YYCache)简单的二次封装，封装常见的GET、POST、�
 	TODO:WiFi和流量切换监听
 
 
-#Usage 使用方法
+# Usage 使用方法
 
 
