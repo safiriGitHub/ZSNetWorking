@@ -76,6 +76,7 @@ AFNetworking(TODO:YYCache)简单的二次封装，封装常见的GET、POST、�
 ##### GET
 
 ``` 
+	
 	//ZSMobService 为自定义服务类
 	ZSRequestModel *model = [[ZSRequestModel alloc] init];
     model.serviceClass = [ZSMobService class];
@@ -92,7 +93,7 @@ AFNetworking(TODO:YYCache)简单的二次封装，封装常见的GET、POST、�
 ##### POST
 
 ```
-	//ZSCheFuService 为自定义服务类,提供根URL、秘钥、解析方法等自定义配置
+//ZSCheFuService 为自定义服务类,提供根URL、秘钥、解析方法等自定义配置
 	ZSRequestModel *model = [[ZSRequestModel alloc] init];
     model.serviceClass = [ZSCheFuService class];
     model.methodURL = @"init.do";
@@ -118,7 +119,8 @@ AFNetworking(TODO:YYCache)简单的二次封装，封装常见的GET、POST、�
 ##### Download
 
 ```
-	ZSRequestModel *model = [[ZSRequestModel alloc] init];
+
+ZSRequestModel *model = [[ZSRequestModel alloc] init];
     model.requestFullURL = @"http://cn.bing.com/az/hprichbg/rb/WindmillLighthouse_ZH-CN12870536851_1920x1080.jpg";
     [ZSNetWorking DownloadRequestModel:model progress:^(NSProgress *taskProgress) {
         dispatch_async(dispatch_get_main_queue(), ^{
