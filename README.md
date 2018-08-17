@@ -2,7 +2,7 @@
 AFNetworking(TODO:YYCache)简单的二次封装，封装常见的GET、POST、文件上传/下载、网络状态监测。
 
 
-#Introduction 介绍
+# Introduction 介绍
 ---
 
 ### 1.主要类介绍：
@@ -72,5 +72,77 @@ AFNetworking(TODO:YYCache)简单的二次封装，封装常见的GET、POST、�
 
 
 # Usage 使用方法
+
+##### GET
+
+``` 
+	//ZSMobService 为自定义服务类
+	ZSRequestModel *model = [[ZSRequestModel alloc] init];
+    model.serviceClass = [ZSMobService class];
+    model.methodURL = @"car/brand/query";
+    model.paramDictionary = @{@"key":@"209bdde75fab1"};
+    
+    [ZSNetWorking GETRequestModel:model cancelControl:self completion:^(NSArray * _Nonnull resultArray, NSString * _Nonnull responseCode, NSString * _Nonnull responseMessage) {
+        NSLog(@"responseMessage - %@",responseMessage);
+        NSLog(@"resultArray - %@",resultArray);
+    }];
+
+```
+
+##### POST
+
+```
+	//ZSCheFuService 为自定义服务类,提供根URL、秘钥、解析方法等自定义配置
+	ZSRequestModel *model = [[ZSRequestModel alloc] init];
+    model.serviceClass = [ZSCheFuService class];
+    model.methodURL = @"init.do";
+    NSString *key = model.service.symmetricEnDecryptionKey;
+    NSString *gIv = model.service.symmetricEnDecryptionIv;
+    NSLog(@"key - %@",key);
+    NSLog(@"gIv - %@",gIv);
+    
+    //...
+    //通过一系列配置、加密、签名，得到下面的请求参数
+    NSString *reqDataString = @"...";
+    model.paramDictionary = @{@"reqData":reqDataString,
+                              @"serviceName":@"serviceName",
+                              @"signature":@"f75cf3a2d6a55ff0429dce283e133039"
+                              };
+    
+    [ZSNetWorking POSTRequestModel:model cancelControl:self completion:^(NSArray * _Nonnull resultArray, NSString * _Nonnull responseCode, NSString * _Nonnull responseMessage) {
+        NSLog(@"responseMessage - %@",responseMessage);
+        NSLog(@"resultArray - %@",resultArray);
+    }];
+```
+
+##### Download
+
+```
+	ZSRequestModel *model = [[ZSRequestModel alloc] init];
+    model.requestFullURL = @"http://cn.bing.com/az/hprichbg/rb/WindmillLighthouse_ZH-CN12870536851_1920x1080.jpg";
+    [ZSNetWorking DownloadRequestModel:model progress:^(NSProgress *taskProgress) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.progressView setProgress:taskProgress.fractionCompleted animated:YES];
+        });
+    } completion:^(NSURLResponse *response, NSURL *filePath, NSError *error, NSData *resumeData) {
+        if (filePath && !error) {
+            NSLog(@"下载成功: %@",filePath.path);
+            UIImage *image = [UIImage imageWithContentsOfFile:filePath.path];
+            ShowImageVC *showVC = [[ShowImageVC alloc] init];
+            showVC.image = image;
+            [self.navigationController pushViewController:showVC animated:YES];
+        }
+        else if (resumeData) {
+            //下载失败，有resumeData
+        }
+    }];
+
+```
+
+##### Upload
+
+**更多例子请查看Demo工程**
+
+
 
 
