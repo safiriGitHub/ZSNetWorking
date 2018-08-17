@@ -1,0 +1,6 @@
+framework module Pods_ZSNetWorking_master {
+  umbrella header "Pods-ZSNetWorking-master-umbrella.h"
+
+  export *
+  module * { export * }
+}

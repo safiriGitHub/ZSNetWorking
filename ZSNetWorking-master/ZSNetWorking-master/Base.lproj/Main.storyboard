@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wmy-3q-hj9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="VTr-dB-x4Y">
+            <objects>
+                <navigationController id="wmy-3q-hj9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1em-Y7-9VC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ut2-v3-ndb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzC-2U-S68" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607" y="96"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T5R-Jw-VuW"/>
+                        <viewControllerLayoutGuide type="bottom" id="noL-A9-bbt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QW7-kR-nvV">
+                                <rect key="frame" x="101" y="228" width="152" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="GET Request Example"/>
+                                <connections>
+                                    <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zd1-mF-17O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADd-yw-VxV">
+                                <rect key="frame" x="96" y="291" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="POST Request Example"/>
+                                <connections>
+                                    <action selector="postRequestClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IrI-WO-9aM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gn-HI-Bco">
+                                <rect key="frame" x="82" y="344" width="191" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Download Request Example"/>
+                                <connections>
+                                    <action selector="downloadRequestClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CUo-oC-T1S"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anb-hB-jmT">
+                                <rect key="frame" x="101" y="397" width="150" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCf-EC-2ub">
+                                <rect key="frame" x="96" y="490" width="172" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload Request Example"/>
+                                <connections>
+                                    <action selector="uploadRequestClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="111-oi-c7q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NL5-JG-NOR">
+                                <rect key="frame" x="118" y="419" width="128" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="断点下载"/>
+                                <connections>
+                                    <segue destination="QE8-3o-s1B" kind="show" id="GEB-Gv-wff"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pc9-sz-veP"/>
+                    <connections>
+                        <outlet property="progressView" destination="anb-hB-jmT" id="hbC-2l-bjg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="95.802098950524751"/>
+        </scene>
+        <!--Download ExampleVC-->
+        <scene sceneID="aLp-p5-EWk">
+            <objects>
+                <viewController id="QE8-3o-s1B" customClass="DownloadExampleVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="93w-Jw-wnu"/>
+                        <viewControllerLayoutGuide type="bottom" id="34e-Hb-Q0n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cv9-NT-dva">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T1N-we-0sI">
+                                <rect key="frame" x="16" y="213" width="343" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="gXI-nB-7R9"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前下载进度:0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaL-8L-Eub">
+                                <rect key="frame" x="121" y="252" width="133" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7p-9F-86Y">
+                                <rect key="frame" x="155" y="318" width="64" height="64"/>
+                                <state key="normal" image="downloadBegin"/>
+                                <connections>
+                                    <action selector="beginSuspendButtonClick:" destination="QE8-3o-s1B" eventType="touchUpInside" id="hye-r1-SAL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UaL-8L-Eub" firstAttribute="centerX" secondItem="cv9-NT-dva" secondAttribute="centerX" id="0jC-ih-06W"/>
+                            <constraint firstItem="o7p-9F-86Y" firstAttribute="top" secondItem="UaL-8L-Eub" secondAttribute="bottom" constant="45" id="6B2-NW-bsp"/>
+                            <constraint firstItem="o7p-9F-86Y" firstAttribute="centerX" secondItem="cv9-NT-dva" secondAttribute="centerX" id="EOu-PG-M7d"/>
+                            <constraint firstItem="T1N-we-0sI" firstAttribute="top" secondItem="93w-Jw-wnu" secondAttribute="bottom" constant="149" id="MKR-dp-SPZ"/>
+                            <constraint firstItem="T1N-we-0sI" firstAttribute="centerX" secondItem="cv9-NT-dva" secondAttribute="centerX" id="Xgb-u4-Dx9"/>
+                            <constraint firstItem="UaL-8L-Eub" firstAttribute="top" secondItem="T1N-we-0sI" secondAttribute="bottom" constant="37" id="auo-9R-Ne3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beginSuspendButton" destination="o7p-9F-86Y" id="Rwq-fP-afW"/>
+                        <outlet property="progressLabel" destination="UaL-8L-Eub" id="VAo-JQ-6bQ"/>
+                        <outlet property="progressView" destination="T1N-we-0sI" id="D4o-d7-jLG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Udv-hZ-kyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="95.802098950524751"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="downloadBegin" width="64" height="64"/>
+    </resources>
+</document>

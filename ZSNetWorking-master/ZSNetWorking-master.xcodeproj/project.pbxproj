@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03890B4B212409F500750136 /* ZSMobService.m in Sources */ = {isa = PBXBuildFile; fileRef = 03890B4A212409F500750136 /* ZSMobService.m */; };
+		03890B4E21240B6200750136 /* ZSNetConnectMonitorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 03890B4C21240B6100750136 /* ZSNetConnectMonitorUtil.m */; };
+		03890B512124208800750136 /* ZSCheFuService.m in Sources */ = {isa = PBXBuildFile; fileRef = 03890B502124208800750136 /* ZSCheFuService.m */; };
+		0396FE6421215DE7000CBB0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE6321215DE7000CBB0A /* AppDelegate.m */; };
+		0396FE6721215DE7000CBB0A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE6621215DE7000CBB0A /* ViewController.m */; };
+		0396FE6A21215DE7000CBB0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0396FE6821215DE7000CBB0A /* Main.storyboard */; };
+		0396FE6C21215DE9000CBB0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0396FE6B21215DE9000CBB0A /* Assets.xcassets */; };
+		0396FE6F21215DE9000CBB0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0396FE6D21215DE9000CBB0A /* LaunchScreen.storyboard */; };
+		0396FE7221215DE9000CBB0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE7121215DE9000CBB0A /* main.m */; };
+		0396FE7E2121632A000CBB0A /* ZSNetEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE7D2121632A000CBB0A /* ZSNetEngine.m */; };
+		0396FE8121216BAA000CBB0A /* ZSRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE8021216BAA000CBB0A /* ZSRequestGenerator.m */; };
+		0396FE8521216D31000CBB0A /* ZSRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE8421216D31000CBB0A /* ZSRequestModel.m */; };
+		039798A4212510B900E03147 /* ShowImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 039798A3212510B900E03147 /* ShowImageVC.m */; };
+		039798A721252BBE00E03147 /* DownloadExampleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 039798A621252BBE00E03147 /* DownloadExampleVC.m */; };
+		03B851A62122716200CB64D7 /* ZSUploadFileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B851A52122716200CB64D7 /* ZSUploadFileModel.m */; };
+		03B851AD2122AF7C00CB64D7 /* ZSNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B851AC2122AF7C00CB64D7 /* ZSNetRequest.m */; };
+		03B851B32122B86000CB64D7 /* ZSNetCancelStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B851B22122B86000CB64D7 /* ZSNetCancelStorage.m */; };
+		03B851B62122DEB900CB64D7 /* ZSNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B851B52122DEB900CB64D7 /* ZSNetWorking.m */; };
+		71277E6232159EAF21E8AD02 /* Pods_ZSNetWorking_master.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA01B92FCC120CCFB062685 /* Pods_ZSNetWorking_master.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03890B49212409F500750136 /* ZSMobService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSMobService.h; sourceTree = "<group>"; };
+		03890B4A212409F500750136 /* ZSMobService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSMobService.m; sourceTree = "<group>"; };
+		03890B4C21240B6100750136 /* ZSNetConnectMonitorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSNetConnectMonitorUtil.m; sourceTree = "<group>"; };
+		03890B4D21240B6200750136 /* ZSNetConnectMonitorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSNetConnectMonitorUtil.h; sourceTree = "<group>"; };
+		03890B4F2124208800750136 /* ZSCheFuService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSCheFuService.h; sourceTree = "<group>"; };
+		03890B502124208800750136 /* ZSCheFuService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSCheFuService.m; sourceTree = "<group>"; };
+		0396FE5F21215DE7000CBB0A /* ZSNetWorking-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZSNetWorking-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0396FE6221215DE7000CBB0A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0396FE6321215DE7000CBB0A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0396FE6521215DE7000CBB0A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0396FE6621215DE7000CBB0A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0396FE6921215DE7000CBB0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0396FE6B21215DE9000CBB0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0396FE6E21215DE9000CBB0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0396FE7021215DE9000CBB0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0396FE7121215DE9000CBB0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0396FE7B21216042000CBB0A /* ZSNetConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSNetConfig.h; sourceTree = "<group>"; };
+		0396FE7C2121632A000CBB0A /* ZSNetEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSNetEngine.h; sourceTree = "<group>"; };
+		0396FE7D2121632A000CBB0A /* ZSNetEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSNetEngine.m; sourceTree = "<group>"; };
+		0396FE7F21216BAA000CBB0A /* ZSRequestGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSRequestGenerator.h; sourceTree = "<group>"; };
+		0396FE8021216BAA000CBB0A /* ZSRequestGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSRequestGenerator.m; sourceTree = "<group>"; };
+		0396FE8321216D31000CBB0A /* ZSRequestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSRequestModel.h; sourceTree = "<group>"; };
+		0396FE8421216D31000CBB0A /* ZSRequestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSRequestModel.m; sourceTree = "<group>"; };
+		039798A2212510B900E03147 /* ShowImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowImageVC.h; sourceTree = "<group>"; };
+		039798A3212510B900E03147 /* ShowImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowImageVC.m; sourceTree = "<group>"; };
+		039798A521252BBE00E03147 /* DownloadExampleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadExampleVC.h; sourceTree = "<group>"; };
+		039798A621252BBE00E03147 /* DownloadExampleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadExampleVC.m; sourceTree = "<group>"; };
+		03B851A42122716200CB64D7 /* ZSUploadFileModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSUploadFileModel.h; sourceTree = "<group>"; };
+		03B851A52122716200CB64D7 /* ZSUploadFileModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSUploadFileModel.m; sourceTree = "<group>"; };
+		03B851AB2122AF7C00CB64D7 /* ZSNetRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSNetRequest.h; sourceTree = "<group>"; };
+		03B851AC2122AF7C00CB64D7 /* ZSNetRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSNetRequest.m; sourceTree = "<group>"; };
+		03B851B12122B86000CB64D7 /* ZSNetCancelStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSNetCancelStorage.h; sourceTree = "<group>"; };
+		03B851B22122B86000CB64D7 /* ZSNetCancelStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSNetCancelStorage.m; sourceTree = "<group>"; };
+		03B851B42122DEB900CB64D7 /* ZSNetWorking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSNetWorking.h; sourceTree = "<group>"; };
+		03B851B52122DEB900CB64D7 /* ZSNetWorking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSNetWorking.m; sourceTree = "<group>"; };
+		7361E7C1682B3E5B78F44049 /* Pods-ZSNetWorking-master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSNetWorking-master.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZSNetWorking-master/Pods-ZSNetWorking-master.debug.xcconfig"; sourceTree = "<group>"; };
+		746993289FC32DB8789C8548 /* Pods-ZSNetWorking-master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSNetWorking-master.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZSNetWorking-master/Pods-ZSNetWorking-master.release.xcconfig"; sourceTree = "<group>"; };
+		CBA01B92FCC120CCFB062685 /* Pods_ZSNetWorking_master.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZSNetWorking_master.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0396FE5C21215DE7000CBB0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71277E6232159EAF21E8AD02 /* Pods_ZSNetWorking_master.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0396FE5621215DE7000CBB0A = {
+			isa = PBXGroup;
+			children = (
+				0396FE7821215EF8000CBB0A /* Classes */,
+				0396FE6121215DE7000CBB0A /* ZSNetWorking-master */,
+				0396FE6021215DE7000CBB0A /* Products */,
+				84005E34E401D3B087F329C4 /* Pods */,
+				DDD2C7BE2E33EAC1D12AFA48 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0396FE6021215DE7000CBB0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0396FE5F21215DE7000CBB0A /* ZSNetWorking-master.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0396FE6121215DE7000CBB0A /* ZSNetWorking-master */ = {
+			isa = PBXGroup;
+			children = (
+				03890B49212409F500750136 /* ZSMobService.h */,
+				03890B4A212409F500750136 /* ZSMobService.m */,
+				03890B4F2124208800750136 /* ZSCheFuService.h */,
+				03890B502124208800750136 /* ZSCheFuService.m */,
+				0396FE6221215DE7000CBB0A /* AppDelegate.h */,
+				0396FE6321215DE7000CBB0A /* AppDelegate.m */,
+				0396FE6521215DE7000CBB0A /* ViewController.h */,
+				0396FE6621215DE7000CBB0A /* ViewController.m */,
+				039798A2212510B900E03147 /* ShowImageVC.h */,
+				039798A3212510B900E03147 /* ShowImageVC.m */,
+				039798A521252BBE00E03147 /* DownloadExampleVC.h */,
+				039798A621252BBE00E03147 /* DownloadExampleVC.m */,
+				0396FE6821215DE7000CBB0A /* Main.storyboard */,
+				0396FE6B21215DE9000CBB0A /* Assets.xcassets */,
+				0396FE6D21215DE9000CBB0A /* LaunchScreen.storyboard */,
+				0396FE7021215DE9000CBB0A /* Info.plist */,
+				0396FE7121215DE9000CBB0A /* main.m */,
+			);
+			path = "ZSNetWorking-master";
+			sourceTree = "<group>";
+		};
+		0396FE7821215EF8000CBB0A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				03B851AA2122AEF500CB64D7 /* NetRequest */,
+				0396FE8221216CB8000CBB0A /* NetModel */,
+				0396FE7A21216010000CBB0A /* NetUtil */,
+				0396FE7921215F43000CBB0A /* NetEngine */,
+			);
+			name = Classes;
+			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		0396FE7921215F43000CBB0A /* NetEngine */ = {
+			isa = PBXGroup;
+			children = (
+				0396FE7C2121632A000CBB0A /* ZSNetEngine.h */,
+				0396FE7D2121632A000CBB0A /* ZSNetEngine.m */,
+				0396FE7F21216BAA000CBB0A /* ZSRequestGenerator.h */,
+				0396FE8021216BAA000CBB0A /* ZSRequestGenerator.m */,
+			);
+			path = NetEngine;
+			sourceTree = "<group>";
+		};
+		0396FE7A21216010000CBB0A /* NetUtil */ = {
+			isa = PBXGroup;
+			children = (
+				0396FE7B21216042000CBB0A /* ZSNetConfig.h */,
+				03890B4D21240B6200750136 /* ZSNetConnectMonitorUtil.h */,
+				03890B4C21240B6100750136 /* ZSNetConnectMonitorUtil.m */,
+				03B851B12122B86000CB64D7 /* ZSNetCancelStorage.h */,
+				03B851B22122B86000CB64D7 /* ZSNetCancelStorage.m */,
+			);
+			path = NetUtil;
+			sourceTree = "<group>";
+		};
+		0396FE8221216CB8000CBB0A /* NetModel */ = {
+			isa = PBXGroup;
+			children = (
+				0396FE8321216D31000CBB0A /* ZSRequestModel.h */,
+				0396FE8421216D31000CBB0A /* ZSRequestModel.m */,
+				03B851A42122716200CB64D7 /* ZSUploadFileModel.h */,
+				03B851A52122716200CB64D7 /* ZSUploadFileModel.m */,
+			);
+			path = NetModel;
+			sourceTree = "<group>";
+		};
+		03B851AA2122AEF500CB64D7 /* NetRequest */ = {
+			isa = PBXGroup;
+			children = (
+				03B851B42122DEB900CB64D7 /* ZSNetWorking.h */,
+				03B851B52122DEB900CB64D7 /* ZSNetWorking.m */,
+				03B851AB2122AF7C00CB64D7 /* ZSNetRequest.h */,
+				03B851AC2122AF7C00CB64D7 /* ZSNetRequest.m */,
+			);
+			path = NetRequest;
+			sourceTree = "<group>";
+		};
+		84005E34E401D3B087F329C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7361E7C1682B3E5B78F44049 /* Pods-ZSNetWorking-master.debug.xcconfig */,
+				746993289FC32DB8789C8548 /* Pods-ZSNetWorking-master.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DDD2C7BE2E33EAC1D12AFA48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBA01B92FCC120CCFB062685 /* Pods_ZSNetWorking_master.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0396FE5E21215DE7000CBB0A /* ZSNetWorking-master */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0396FE7521215DE9000CBB0A /* Build configuration list for PBXNativeTarget "ZSNetWorking-master" */;
+			buildPhases = (
+				E95377CC997048FD2DF73F5D /* [CP] Check Pods Manifest.lock */,
+				0396FE5B21215DE7000CBB0A /* Sources */,
+				0396FE5C21215DE7000CBB0A /* Frameworks */,
+				0396FE5D21215DE7000CBB0A /* Resources */,
+				8066296F24D83A05BE3DAB6E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ZSNetWorking-master";
+			productName = "ZSNetWorking-master";
+			productReference = 0396FE5F21215DE7000CBB0A /* ZSNetWorking-master.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0396FE5721215DE7000CBB0A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = safiri;
+				TargetAttributes = {
+					0396FE5E21215DE7000CBB0A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 0396FE5A21215DE7000CBB0A /* Build configuration list for PBXProject "ZSNetWorking-master" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0396FE5621215DE7000CBB0A;
+			productRefGroup = 0396FE6021215DE7000CBB0A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0396FE5E21215DE7000CBB0A /* ZSNetWorking-master */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0396FE5D21215DE7000CBB0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0396FE6F21215DE9000CBB0A /* LaunchScreen.storyboard in Resources */,
+				0396FE6C21215DE9000CBB0A /* Assets.xcassets in Resources */,
+				0396FE6A21215DE7000CBB0A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8066296F24D83A05BE3DAB6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZSNetWorking-master/Pods-ZSNetWorking-master-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZSNetWorking-master/Pods-ZSNetWorking-master-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E95377CC997048FD2DF73F5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZSNetWorking-master-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0396FE5B21215DE7000CBB0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03B851A62122716200CB64D7 /* ZSUploadFileModel.m in Sources */,
+				03B851AD2122AF7C00CB64D7 /* ZSNetRequest.m in Sources */,
+				03890B4E21240B6200750136 /* ZSNetConnectMonitorUtil.m in Sources */,
+				0396FE8521216D31000CBB0A /* ZSRequestModel.m in Sources */,
+				039798A721252BBE00E03147 /* DownloadExampleVC.m in Sources */,
+				0396FE6721215DE7000CBB0A /* ViewController.m in Sources */,
+				03B851B62122DEB900CB64D7 /* ZSNetWorking.m in Sources */,
+				0396FE8121216BAA000CBB0A /* ZSRequestGenerator.m in Sources */,
+				03890B512124208800750136 /* ZSCheFuService.m in Sources */,
+				039798A4212510B900E03147 /* ShowImageVC.m in Sources */,
+				03B851B32122B86000CB64D7 /* ZSNetCancelStorage.m in Sources */,
+				0396FE7221215DE9000CBB0A /* main.m in Sources */,
+				0396FE7E2121632A000CBB0A /* ZSNetEngine.m in Sources */,
+				03890B4B212409F500750136 /* ZSMobService.m in Sources */,
+				0396FE6421215DE7000CBB0A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0396FE6821215DE7000CBB0A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0396FE6921215DE7000CBB0A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0396FE6D21215DE9000CBB0A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0396FE6E21215DE9000CBB0A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0396FE7321215DE9000CBB0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0396FE7421215DE9000CBB0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0396FE7621215DE9000CBB0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7361E7C1682B3E5B78F44049 /* Pods-ZSNetWorking-master.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HWZH7TV284;
+				INFOPLIST_FILE = "ZSNetWorking-master/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.safiri.ZSNetWorking-master";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0396FE7721215DE9000CBB0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 746993289FC32DB8789C8548 /* Pods-ZSNetWorking-master.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HWZH7TV284;
+				INFOPLIST_FILE = "ZSNetWorking-master/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.safiri.ZSNetWorking-master";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0396FE5A21215DE7000CBB0A /* Build configuration list for PBXProject "ZSNetWorking-master" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0396FE7321215DE9000CBB0A /* Debug */,
+				0396FE7421215DE9000CBB0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0396FE7521215DE9000CBB0A /* Build configuration list for PBXNativeTarget "ZSNetWorking-master" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0396FE7621215DE9000CBB0A /* Debug */,
+				0396FE7721215DE9000CBB0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0396FE5721215DE7000CBB0A /* Project object */;
+}
