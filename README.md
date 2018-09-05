@@ -77,8 +77,8 @@ AFNetworking(TODO:YYCache)简单的二次封装，封装常见的GET、POST、�
 
 ``` 
 	
-	//ZSMobService 为自定义服务类
-	ZSRequestModel *model = [[ZSRequestModel alloc] init];
+    //ZSMobService 为自定义服务类
+    ZSRequestModel *model = [[ZSRequestModel alloc] init];
     model.serviceClass = [ZSMobService class];
     model.methodURL = @"car/brand/query";
     model.paramDictionary = @{@"key":@"209bdde75fab1"};
@@ -93,8 +93,9 @@ AFNetworking(TODO:YYCache)简单的二次封装，封装常见的GET、POST、�
 ##### POST
 
 ```
-//ZSCheFuService 为自定义服务类,提供根URL、秘钥、解析方法等自定义配置
-	ZSRequestModel *model = [[ZSRequestModel alloc] init];
+    
+    //ZSCheFuService 为自定义服务类,提供根URL、秘钥、解析方法等自定义配置
+    ZSRequestModel *model = [[ZSRequestModel alloc] init];
     model.serviceClass = [ZSCheFuService class];
     model.methodURL = @"init.do";
     NSString *key = model.service.symmetricEnDecryptionKey;
@@ -120,7 +121,7 @@ AFNetworking(TODO:YYCache)简单的二次封装，封装常见的GET、POST、�
 
 ```
 
-ZSRequestModel *model = [[ZSRequestModel alloc] init];
+    ZSRequestModel *model = [[ZSRequestModel alloc] init];
     model.requestFullURL = @"http://cn.bing.com/az/hprichbg/rb/WindmillLighthouse_ZH-CN12870536851_1920x1080.jpg";
     [ZSNetWorking DownloadRequestModel:model progress:^(NSProgress *taskProgress) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -149,7 +150,9 @@ ZSRequestModel *model = [[ZSRequestModel alloc] init];
 # 更新记录
 
 - 0.0.1：常用的GET、POST、文件上传/下载、网络状态监测功能；	
-		 取消网络请求任务功能；
-		 自定义服务器协议；
+		 
+         取消网络请求任务功能；
+		 
+         自定义服务器协议；
 
 
