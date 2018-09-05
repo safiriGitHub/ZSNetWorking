@@ -95,21 +95,21 @@ Pod::Spec.new do |s|
   # s.source_files  = "Classes", "Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
-  s.subspec 'NetEngine' do |ss|
-      ss.source_files = "Classes/NetEngine/**/*.{h,m}"
-  end
-
-  s.subspec 'NetModel' do |ss|
-      ss.source_files = "Classes/NetModel/**/*.{h,m}"
-  end
-
-  s.subspec 'NetRequest' do |ss|
-      ss.source_files = "Classes/NetRequest/**/*.{h,m}"
-  end
-
   s.subspec 'NetUtil' do |ss|
       ss.source_files = "Classes/NetUtil/**/*.{h,m}"
   end
+
+  s.subspec 'NetEngine' do |ss|
+    ss.source_files = "Classes/NetEngine/**/*.{h,m}"
+    ss.dependency 'ZSNetWorking/NetUtil'
+  end
+
+  s.subspec 'NetRequest' do |ss|
+    ss.source_files = "Classes/NetRequest/**/*.{h,m}"
+    ss.dependency 'ZSNetWorking/NetEngine'
+  end
+
+  
 
   # s.public_header_files = "Classes/**/*.h"
 

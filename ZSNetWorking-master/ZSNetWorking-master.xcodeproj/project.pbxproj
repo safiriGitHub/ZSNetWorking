@@ -128,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				03B851AA2122AEF500CB64D7 /* NetRequest */,
-				0396FE8221216CB8000CBB0A /* NetModel */,
 				0396FE7A21216010000CBB0A /* NetUtil */,
 				0396FE7921215F43000CBB0A /* NetEngine */,
 			);
@@ -150,24 +149,15 @@
 		0396FE7A21216010000CBB0A /* NetUtil */ = {
 			isa = PBXGroup;
 			children = (
-				0396FE7B21216042000CBB0A /* ZSNetConfig.h */,
-				03890B4D21240B6200750136 /* ZSNetConnectMonitorUtil.h */,
-				03890B4C21240B6100750136 /* ZSNetConnectMonitorUtil.m */,
-				03B851B12122B86000CB64D7 /* ZSNetCancelStorage.h */,
-				03B851B22122B86000CB64D7 /* ZSNetCancelStorage.m */,
-			);
-			path = NetUtil;
-			sourceTree = "<group>";
-		};
-		0396FE8221216CB8000CBB0A /* NetModel */ = {
-			isa = PBXGroup;
-			children = (
 				0396FE8321216D31000CBB0A /* ZSRequestModel.h */,
 				0396FE8421216D31000CBB0A /* ZSRequestModel.m */,
 				03B851A42122716200CB64D7 /* ZSUploadFileModel.h */,
 				03B851A52122716200CB64D7 /* ZSUploadFileModel.m */,
+				0396FE7B21216042000CBB0A /* ZSNetConfig.h */,
+				03890B4D21240B6200750136 /* ZSNetConnectMonitorUtil.h */,
+				03890B4C21240B6100750136 /* ZSNetConnectMonitorUtil.m */,
 			);
-			path = NetModel;
+			path = NetUtil;
 			sourceTree = "<group>";
 		};
 		03B851AA2122AEF500CB64D7 /* NetRequest */ = {
@@ -177,6 +167,8 @@
 				03B851B52122DEB900CB64D7 /* ZSNetWorking.m */,
 				03B851AB2122AF7C00CB64D7 /* ZSNetRequest.h */,
 				03B851AC2122AF7C00CB64D7 /* ZSNetRequest.m */,
+				03B851B12122B86000CB64D7 /* ZSNetCancelStorage.h */,
+				03B851B22122B86000CB64D7 /* ZSNetCancelStorage.m */,
 			);
 			path = NetRequest;
 			sourceTree = "<group>";
