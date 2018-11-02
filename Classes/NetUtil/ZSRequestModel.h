@@ -54,6 +54,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSDictionary <NSString *, NSString *>*requestHeaderParamDictionary;
 
 /**
+ 服务接口返回的cookied字典
+ */
+@property (nonatomic, copy, nullable) NSDictionary *reponseHeaderFieldsDictionary;
+
+/**
  请求上传文件参数数组
  */
 @property (nonatomic, strong) NSArray <ZSUploadFileModel *>*uploadFileModelArray;

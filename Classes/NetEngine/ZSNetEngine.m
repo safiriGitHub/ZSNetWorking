@@ -82,6 +82,12 @@
     
     __block NSURLSessionDataTask *task = [self.sessionManager dataTaskWithRequest:request uploadProgress:requestModel.uploadProgressBlock downloadProgress:requestModel.downloadProgressBlock completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
+        if ([response isKindOfClass:NSHTTPURLResponse.class]) {
+            //获取服务返回的cookie保存并返回上层
+            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+            NSDictionary *allHeaderFields = httpResponse.allHeaderFields;
+            requestModel.reponseHeaderFieldsDictionary = [allHeaderFields copy];
+        }
         NSNumber *requestID = [NSNumber numberWithUnsignedInteger:task.hash];
         [weakSelf.dispatchTaskTable removeObjectForKey:requestID];
         //这里做completion解析处理

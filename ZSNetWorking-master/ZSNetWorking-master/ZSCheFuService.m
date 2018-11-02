@@ -67,7 +67,7 @@
         
     }
     
-    if (requestModel.connectServiceErrorHintString) responseMessage = requestModel.connectServiceErrorHintString;
+    responseMessage = requestModel.connectServiceErrorHintString;
     if (responseMessage == nil) responseMessage = @"";
     
     //后台错误code 更改下提示

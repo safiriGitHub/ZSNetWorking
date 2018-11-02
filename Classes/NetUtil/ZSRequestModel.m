@@ -39,6 +39,7 @@
 }
 
 //MARK: service
+
 - (id<ZSServiceProtocol>)service {
     if (!_service) {
         BOOL conform = [self.serviceClass conformsToProtocol:@protocol(ZSServiceProtocol)];
