@@ -9,7 +9,9 @@
 #import "ViewController.h"
 #import "ZSMobService.h"
 #import "ZSCheFuService.h"
+#import "ProjectMainServer.h"
 #import "ShowImageVC.h"
+#import "AFNetworking.h"
 
 @interface ViewController ()
 
@@ -24,14 +26,31 @@
     
 }
 - (IBAction)click:(id)sender {
+    
     ZSRequestModel *model = [[ZSRequestModel alloc] init];
     model.serviceClass = [ZSMobService class];
     model.methodURL = @"car/brand/query";
     model.requestParams = @{@"key":@"209bdde75fab1"};
-    
+
     [ZSNetWorking GETRequestModel:model cancelControl:self completion:^(NSArray * _Nonnull resultArray, NSString * _Nonnull responseCode, NSString * _Nonnull responseMessage) {
         NSLog(@"responseMessage - %@",responseMessage);
         NSLog(@"resultArray - %@",resultArray);
+    }];
+}
+
+- (IBAction)jsonPost:(id)sender {
+    
+    ZSRequestModel *model = [[ZSRequestModel alloc] init];
+    model.serviceClass = [ProjectMainServer class];
+    model.methodURL = @"userinfo/login";
+    model.requestParams = @{@"":@""};
+    model.requestSerializerType = AFJSONRequestSerializerType;
+    
+    [ZSNetWorking POSTRequestModel:model cancelControl:self completion:^(NSArray *resultArray, NSString *responseCode, NSString *responseMessage) {
+        if (responseCode.integerValue == 200) {
+            
+        }else {
+        }
     }];
 }
 

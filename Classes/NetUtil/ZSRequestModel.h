@@ -41,6 +41,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) ZSNetRequestType netRequestType;
 
+/**
+ AFNetworking请求参数编码的序列化器类型
+ */
+@property (nonatomic, assign) AFNetworkingRequestSerializerType requestSerializerType;
+
 //MARK: param
 
 /**

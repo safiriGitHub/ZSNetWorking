@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0388A9DE21A3D9A800C8BBCD /* ProjectMainServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0388A9DD21A3D9A800C8BBCD /* ProjectMainServer.m */; };
 		03890B4B212409F500750136 /* ZSMobService.m in Sources */ = {isa = PBXBuildFile; fileRef = 03890B4A212409F500750136 /* ZSMobService.m */; };
 		03890B4E21240B6200750136 /* ZSNetConnectMonitorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 03890B4C21240B6100750136 /* ZSNetConnectMonitorUtil.m */; };
 		03890B512124208800750136 /* ZSCheFuService.m in Sources */ = {isa = PBXBuildFile; fileRef = 03890B502124208800750136 /* ZSCheFuService.m */; };
@@ -29,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0388A9DC21A3D9A800C8BBCD /* ProjectMainServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectMainServer.h; sourceTree = "<group>"; };
+		0388A9DD21A3D9A800C8BBCD /* ProjectMainServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectMainServer.m; sourceTree = "<group>"; };
 		03890B49212409F500750136 /* ZSMobService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSMobService.h; sourceTree = "<group>"; };
 		03890B4A212409F500750136 /* ZSMobService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSMobService.m; sourceTree = "<group>"; };
 		03890B4C21240B6100750136 /* ZSNetConnectMonitorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSNetConnectMonitorUtil.m; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 				03890B4A212409F500750136 /* ZSMobService.m */,
 				03890B4F2124208800750136 /* ZSCheFuService.h */,
 				03890B502124208800750136 /* ZSCheFuService.m */,
+				0388A9DC21A3D9A800C8BBCD /* ProjectMainServer.h */,
+				0388A9DD21A3D9A800C8BBCD /* ProjectMainServer.m */,
 				0396FE6221215DE7000CBB0A /* AppDelegate.h */,
 				0396FE6321215DE7000CBB0A /* AppDelegate.m */,
 				0396FE6521215DE7000CBB0A /* ViewController.h */,
@@ -302,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03B851A62122716200CB64D7 /* ZSUploadFileModel.m in Sources */,
+				0388A9DE21A3D9A800C8BBCD /* ProjectMainServer.m in Sources */,
 				03B851AD2122AF7C00CB64D7 /* ZSNetRequest.m in Sources */,
 				03890B4E21240B6200750136 /* ZSNetConnectMonitorUtil.m in Sources */,
 				0396FE8521216D31000CBB0A /* ZSRequestModel.m in Sources */,

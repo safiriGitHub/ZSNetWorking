@@ -31,6 +31,26 @@ typedef NS_ENUM (NSUInteger, ZSNetRequestType){
     ZSNetRequestTypeDownload
 };
 
+
+/**
+ 关于 requestSerializer它就是AFNetworking参数编码的序列化器，它一共有三种编码格式：
+ 
+ AFHTTPRequestSerializer：第一种是普通的http的编码格式也就是mid=10&method=userInfo&dateInt=20160818，这种格式的。
+ 
+ AFJSONRequestSerializer：第二种也是json编码格式的，也就是编码成{"mid":"11","method":"userInfo","dateInt":"20160818"}
+ 
+ AFPropertyListRequestSerializer：第三种没用过，但是看介绍接编码成pislt格式的参数
+
+ - AFHTTPRequestSerializer: http的编码格式
+ - AFJSONRequestSerializer: json编码格式
+ - AFPropertyListRequestSerializer: pislt格式
+ */
+typedef NS_ENUM(NSUInteger, AFNetworkingRequestSerializerType) {
+    AFHTTPRequestSerializerType,
+    AFJSONRequestSerializerType,
+    AFPropertyListRequestSerializerType,
+};
+
 /**
  常见链接服务器失败码枚举
 

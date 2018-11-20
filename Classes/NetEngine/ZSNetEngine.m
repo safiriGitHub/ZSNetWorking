@@ -178,7 +178,6 @@
 - (AFURLSessionManager *)sessionManager {
     if (_sessionManager == nil) {
         _sessionManager = [self configHttpManager];
-        
     }
     return _sessionManager;
 }

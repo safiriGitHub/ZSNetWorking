@@ -15,7 +15,13 @@
 
 @interface ZSRequestGenerator()
 
-@property (nonatomic, strong) AFHTTPRequestSerializer *httpRequestSerializer;
+@property (nonatomic, strong) AFHTTPRequestSerializer *requestSerializer;
+
+/**
+ 请求参数编码的序列化器类名
+ */
+@property (nonatomic, strong) NSString *AFRequestSerializerClassString;
+
 
 @end
 
@@ -40,20 +46,37 @@
     //添加请求头参数
     if (requestModel.requestHeaderParamDictionary.count > 0) {
         [requestModel.requestHeaderParamDictionary enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
-            [self.httpRequestSerializer setValue:obj forHTTPHeaderField:key];
+            [self.requestSerializer setValue:obj forHTTPHeaderField:key];
         }];
     }
+    // 设置请求序列化器 可添加相关配置
+    switch (requestModel.requestSerializerType) {
+        case AFHTTPRequestSerializerType:
+            self.AFRequestSerializerClassString = @"AFHTTPRequestSerializer";
+            break;
+        case AFJSONRequestSerializerType:
+            self.AFRequestSerializerClassString = @"AFJSONRequestSerializer";
+            break;
+        case AFPropertyListRequestSerializerType:
+            self.AFRequestSerializerClassString = @"AFPropertyListRequestSerializer";
+            break;
+        default:
+            self.AFRequestSerializerClassString = @"AFHTTPRequestSerializer";
+            break;
+    }
+    self.requestSerializer =  [[NSClassFromString(self.AFRequestSerializerClassString) alloc] init];
     
+    //创建相应的request
     if (requestModel.netRequestType == ZSNetRequestTypeGet) {
-        request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:requestUrl parameters:requestParams error:&error];
+        request = [self.requestSerializer requestWithMethod:@"GET" URLString:requestUrl parameters:requestParams error:&error];
     }
     
     else if (requestModel.netRequestType == ZSNetRequestTypePost) {
-        request = [self.httpRequestSerializer requestWithMethod:@"POST" URLString:requestUrl parameters:requestParams error:&error];
+        request = [self.requestSerializer requestWithMethod:@"POST" URLString:requestUrl parameters:requestParams error:&error];
     }
     
     else if (requestModel.netRequestType == ZSNetRequestTypeUpload) {
-        request = [self.httpRequestSerializer multipartFormRequestWithMethod:@"POST" URLString:requestUrl parameters:requestParams constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        request = [self.requestSerializer multipartFormRequestWithMethod:@"POST" URLString:requestUrl parameters:requestParams constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
             
             //config formData
             for (ZSUploadFileModel *model in requestModel.uploadFileModelArray) {
@@ -106,11 +129,4 @@
     return request;
 }
 
-- (AFHTTPRequestSerializer *)httpRequestSerializer {
-    if (_httpRequestSerializer == nil) {
-        _httpRequestSerializer = [AFHTTPRequestSerializer serializer];
-        _httpRequestSerializer.timeoutInterval = 30.0f;
-    }
-    return _httpRequestSerializer;
-}
 @end
