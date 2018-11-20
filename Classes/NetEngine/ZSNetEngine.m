@@ -86,7 +86,7 @@
             //获取服务返回的cookie保存并返回上层
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
             NSDictionary *allHeaderFields = httpResponse.allHeaderFields;
-            requestModel.reponseHeaderFieldsDictionary = [allHeaderFields copy];
+            requestModel.responseHeaderFieldsDictionary = [allHeaderFields copy];
         }
         NSNumber *requestID = [NSNumber numberWithUnsignedInteger:task.hash];
         [weakSelf.dispatchTaskTable removeObjectForKey:requestID];

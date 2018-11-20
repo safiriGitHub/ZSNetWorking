@@ -33,7 +33,7 @@
 - (NSURLRequest *)generateURLRequest:(ZSRequestModel *)requestModel {
     
     NSString *requestUrl = requestModel.requestFullURL;
-    NSDictionary *requestParams = requestModel.paramDictionary;
+    id requestParams = requestModel.requestParams;
     __autoreleasing NSError *error;
     NSMutableURLRequest *request;
     

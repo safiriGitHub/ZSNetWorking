@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  请求参数字典
  */
-@property (nonatomic, strong, nullable) NSDictionary *paramDictionary;
+@property (nonatomic, strong, nullable) id requestParams;
 
 /**
  请求头参数字典,默认为nil
@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  服务接口返回的cookied字典
  */
-@property (nonatomic, copy, nullable) NSDictionary *reponseHeaderFieldsDictionary;
+@property (nonatomic, copy, nullable) NSDictionary *responseHeaderFieldsDictionary;
 
 /**
  请求上传文件参数数组

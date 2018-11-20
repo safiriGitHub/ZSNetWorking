@@ -27,7 +27,7 @@
     ZSRequestModel *model = [[ZSRequestModel alloc] init];
     model.serviceClass = [ZSMobService class];
     model.methodURL = @"car/brand/query";
-    model.paramDictionary = @{@"key":@"209bdde75fab1"};
+    model.requestParams = @{@"key":@"209bdde75fab1"};
     
     [ZSNetWorking GETRequestModel:model cancelControl:self completion:^(NSArray * _Nonnull resultArray, NSString * _Nonnull responseCode, NSString * _Nonnull responseMessage) {
         NSLog(@"responseMessage - %@",responseMessage);
@@ -47,7 +47,7 @@
     //...
     //通过一系列配置、加密、签名，得到下面的请求参数
     NSString *reqDataString = @"FdFirR5KVtVMufFUbocoVB5IFb3MT03OV6KiIPzpwLQ0tTpQgqqep1k4pwKRb702fSQ8xUcbDDvddwdgZ9QMAKi702jvzZMYBuieW5M41u64uxxElMGIj2/SjBtEgKohzzaCoaT8I0lwPplIjc7b32aNXd6fFFppQ7hEuDJf/FHyYSQDQUT1TFo5c6hxHGrbwRn+vHKjgIEY6wWgBfhvN8BrHctW1q/L2ko39ZXkHWnnCE5g304eroU6jJtyaizIVJktoshjxC37aKZUilU+qtwXYQ706st4wOksnG6Y0ewH2BFW7t+WZpeL6ZK+IAOtpx8dy0Q+9v88rVNv+HPYTe3Rl1kJqzdPf//qnNjmiAAObeTvOjwUKyCXUozHLriD";
-    model.paramDictionary = @{@"reqData":reqDataString,
+    model.requestParams = @{@"reqData":reqDataString,
                               @"siteCode":@"11",
                               @"serviceName":@"com.cf.app.sign",
                               @"signature":@"f75cf3a2d6a55ff0429dce283e133039",
