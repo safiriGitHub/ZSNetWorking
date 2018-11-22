@@ -30,7 +30,7 @@
 
 + (void)GETRequestModel:(ZSRequestModel *)requestModel cancelControl:(NSObject *)control completion:(ZSNetWorkingResponseCompletion)responseCompletion;
 
-+ (void)UploadRequestModel:(ZSRequestModel *)requestModel uploadFiles:(NSArray <ZSUploadFileModel *>*)uploadFileModelArray completion:(ZSNetWorkingResponseCompletion)responseCompletion;
++ (void)UploadRequestModel:(ZSRequestModel *)requestModel progress:(ZSNetProgressBlock)progress completion:(ZSNetWorkingResponseCompletion)responseCompletion;
 
 /**
  Download请求

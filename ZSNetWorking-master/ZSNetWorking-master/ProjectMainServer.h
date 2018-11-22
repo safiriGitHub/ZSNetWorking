@@ -13,7 +13,8 @@
 @interface ProjectMainServer : NSObject<ZSServiceProtocol>
 
 + (ZSRequestModel *)modelWithConfig:(NSString *)serviceName :(NSDictionary *)reqData;
-+ (ZSRequestModel *)modelWZPayWithConfig:(NSString *)serviceName :(NSDictionary *)reqData;
-+ (ZSRequestModel *)modelCheckCarPayWithConfig:(NSString *)serviceName :(NSDictionary *)reqData;
+
++ (ZSRequestModel *)modelUploadWithConfig:(NSString *)serviceName :(NSArray <ZSUploadFileModel *>*)uploadFileModelArray;
+
 
 @end

@@ -9,14 +9,14 @@
 #import "ProjectMainServer.h"
 
 //@Test 一定要注意用正式地址
-static NSString *const MainServerRootUrl = @"http://125.73.45.21:6570/api/api/app/";//澎湃正式地址
+static NSString *const MainServerRootUrl = @"http://125.73.45.21:6570";//澎湃正式地址
 
 @implementation ProjectMainServer
 
 - (NSString *)apiBaseUrl {
     //@test
     //return MainServerRootUrl;
-    return @"http://222.218.31.20:8765/api/api/app/";
+    return @"http://222.218.31.20:8765";
 }
 
 - (ZSRequestEnDecryptType)enDecryptType {
@@ -28,34 +28,16 @@ static NSString *const MainServerRootUrl = @"http://125.73.45.21:6570/api/api/ap
     ZSRequestModel *model = [[ZSRequestModel alloc] init];
     model.serviceClass = [ProjectMainServer class];
     model.methodURL = serviceName;
-    model.netRequestType = ZSNetRequestTypePost;
-    
-//    NSString *siteCode = @"11";
-//    NSString *version = [[UIApplication sharedApplication] appBuildVersion];
-//    NSString *devicetype = @"ios";
-//    NSString *signature = [[NSString stringWithFormat:@"%@%@%@%@%@",paramJson,serviceName,siteCode,version,devicetype] md5String];
-//    NSString *reqDataString = [ZSSecurityUtil encryptAES128ForString:paramJson key:model.service.symmetricEnDecryptionKey giv:model.service.symmetricEnDecryptionIv];
-//
-//    [reqParams setValue:reqDataString forKey:@"reqData"];
-//    [reqParams setValue:siteCode forKey:@"siteCode"];
-//    [reqParams setValue:serviceName forKey:@"serviceName"];
-//    [reqParams setValue:signature forKey:@"signature"];
-//    [reqParams setValue:@"UTF-8" forKey:@"charset"];
-//    [reqParams setValue:version forKey:@"version"];
-//    [reqParams setValue:devicetype forKey:@"deviceType"];
+    model.requestSerializerType = AFJSONRequestSerializerType;
     model.requestParams = reqData;
     return model;
 }
-
-+ (ZSRequestModel *)modelWZPayWithConfig:(NSString *)serviceName :(NSDictionary *)reqData {
-    ZSRequestModel *model = [self modelWithConfig:serviceName :reqData];
-    model.methodURL = @"pay/wfpay.do";
-    return model;
-}
-
-+ (ZSRequestModel *)modelCheckCarPayWithConfig:(NSString *)serviceName :(NSDictionary *)reqData {
-    ZSRequestModel *model = [self modelWithConfig:serviceName :reqData];
-    model.methodURL = @"alipay/createAppointmentOrder.do";
++ (ZSRequestModel *)modelUploadWithConfig:(NSString *)serviceName :(NSArray <ZSUploadFileModel *>*)uploadFileModelArray {
+    ZSRequestModel *model = [[ZSRequestModel alloc] init];
+    model.serviceClass = [ProjectMainServer class];
+    model.methodURL = serviceName;
+    model.requestSerializerType = AFJSONRequestSerializerType;
+    model.uploadFileModelArray = uploadFileModelArray;
     return model;
 }
 
@@ -72,41 +54,30 @@ static NSString *const MainServerRootUrl = @"http://125.73.45.21:6570/api/api/ap
     }else if ([jsonResult isKindOfClass:[NSDictionary class]]){
         jsonDataDictionary = (NSDictionary *)jsonResult;
     }
-   
+    
     //DELog(@"jsonDataDictionary = %@",jsonDataDictionary);
     
-    if (jsonDataDictionary) {
-        responseCode = [jsonDataDictionary objectForKey:@"code"];
-        responseMessage = [jsonDataDictionary objectForKey:@"message"];
-        //NSString *accessToken = [jsonDataDictionary objectForKey:@"accessToken"];
-        NSString *userInfo = [jsonDataDictionary objectForKey:@"userInfo"];
-        
-       
-        __autoreleasing NSError *jsonParseError = nil;
-        id info = [NSJSONSerialization JSONObjectWithData:[userInfo dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&jsonParseError];
-        if (jsonParseError) {
-            [jsonArray addObject:userInfo];
-        }else {
-            if ([info isKindOfClass:[NSArray class]]) {
-                [jsonArray addObjectsFromArray:info];
-            }else if ([info isKindOfClass:[NSDictionary class]]){
-                [jsonArray addObject:info];
-            }else if(info){
-                [jsonArray addObject:info];
-            }
-        }
-        
-    }
-    if (requestModel.connectServiceErrorHintString) responseMessage = requestModel.connectServiceErrorHintString;
-    if (responseMessage == nil) responseMessage = @"";
+    // 后台不同接口返回的JSON基本结构不一致。。。
     
-    if ([responseCode isEqualToString:@"ok"] || [responseCode isEqualToString:@"success"]) {
-        responseCode = @"200";
-    }else {
-        responseCode = @"300";
+    if (jsonDataDictionary) {
+        NSString *code = [jsonDataDictionary objectForKey:@"code"];
+        NSString *res = [jsonDataDictionary objectForKey:@"res"];
+        NSString *message = [jsonDataDictionary objectForKey:@"message"];
+        NSString *msg = [jsonDataDictionary objectForKey:@"msg"];
+        if (code) {
+            responseCode = ([code isEqualToString:@"ok"] || [code isEqualToString:@"success"]) ? @"200" : @"0";
+        }
+        if (res) {
+            responseCode = [res isEqualToString:@"success"] ? @"200" : @"0";
+        }
+        if (message) responseMessage = message;
+        if (msg) responseMessage = msg;
+        
+        [jsonArray addObject:jsonDataDictionary];
     }
     
     completionHandler(jsonArray,responseCode,responseMessage);
 }
+
 
 @end

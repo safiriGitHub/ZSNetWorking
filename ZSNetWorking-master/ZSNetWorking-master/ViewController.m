@@ -105,7 +105,34 @@
 }
 
 - (IBAction)uploadRequestClick:(id)sender {
-    //暂无例子
+    
+    NSMutableArray *array = [NSMutableArray array];
+    for (NSString *imagename in @[@"1024",@"banner"]) {
+        ZSUploadFileModel *upload = [[ZSUploadFileModel alloc] init];
+        upload.uploadType = UploadFile;
+        upload.fileData = UIImagePNGRepresentation([UIImage imageNamed:imagename]);
+        // 上传文件时，是文件不允许被覆盖，文件重名.可以在上传时使用当前的系统时间作为文件名
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        // 设置时间格式
+        [formatter setDateFormat:@"yyyyMMddHHmmss"];
+        NSString *dateString = [formatter stringFromDate:[NSDate date]];
+        NSString *name = [NSString  stringWithFormat:@"%@%@", dateString,imagename];
+        NSString *fileName = [NSString  stringWithFormat:@"%@.png",name];
+        upload.name = name;
+        upload.fileName = fileName;
+        upload.mimeType = @"image/png";
+        [array addObject:upload];
+    }
+    ZSRequestModel *requestModel = [ProjectMainServer modelUploadWithConfig:@"/admin/uploadImg" :array];
+    [ZSNetWorking UploadRequestModel:requestModel progress:^(NSProgress *taskProgress) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.progressView setProgress:taskProgress.fractionCompleted animated:YES];
+        });
+    } completion:^(NSArray *resultArray, NSString *responseCode, NSString *responseMessage) {
+        
+    }];
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

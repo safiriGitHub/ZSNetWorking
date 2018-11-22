@@ -22,10 +22,10 @@
     [ZSNetRequest netRequestModel:requestModel cancelControl:control];
 }
 
-+ (void)UploadRequestModel:(ZSRequestModel *)requestModel uploadFiles:(NSArray <ZSUploadFileModel *>*)uploadFileModelArray completion:(ZSNetWorkingResponseCompletion)responseCompletion {
++ (void)UploadRequestModel:(ZSRequestModel *)requestModel progress:(ZSNetProgressBlock)progress completion:(ZSNetWorkingResponseCompletion)responseCompletion {
     requestModel.netRequestType = ZSNetRequestTypeUpload;
     requestModel.responseCompletion = responseCompletion;
-    requestModel.uploadFileModelArray = uploadFileModelArray;
+    requestModel.uploadProgressBlock = progress;
     [ZSNetRequest netRequestModel:requestModel cancelControl:nil];
 }
 
